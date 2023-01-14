@@ -1,0 +1,23 @@
+body {
+    background-color: rgb(54, 54, 54);
+}
+.general {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+}
+
+.general-child {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: black;
+    height: 100px;
+    width: 200px;
+    opacity: ;
+}
+
+.submit button {
+    justify-content: center;
+}

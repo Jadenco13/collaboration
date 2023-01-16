@@ -1,23 +1,44 @@
 body {
-    background-color: rgb(54, 54, 54);
+    background-image: url("/pages/login/images/insert-image-html.jpg");
+    background-size: cover;
+}
+
+input {
+    margin-top: 10px;
+    width: 100%;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+label {
+    justify-content: center;
 }
 .general {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 500px;
+    height: 600px;
 }
 
 .general-child {
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-direction: column;
-    background-color: black;
     height: 100px;
     width: 200px;
-    opacity: ;
+    /* opacity: ; */
+}
+
+.submit {
+    justify-content: center;
+    text-align: center;
 }
 
 .submit button {
-    justify-content: center;
+  margin-top: 10px;
 }

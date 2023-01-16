@@ -1,44 +1,10 @@
-body {
-    background-image: url("/pages/login/images/insert-image-html.jpg");
-    background-size: cover;
-}
-
-input {
-    margin-top: 10px;
-    width: 100%;
-}
-
-form {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-label {
-    justify-content: center;
-}
 .general {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 600px;
+   height: 100vh;
 }
-
-.general-child {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 100px;
-    width: 200px;
-    /* opacity: ; */
-}
-
-.submit {
-    justify-content: center;
-    text-align: center;
-}
-
-.submit button {
-  margin-top: 10px;
+#form {
+    width: 30%;
+    margin: auto;
 }

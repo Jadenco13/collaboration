@@ -1,3 +1,7 @@
+body {
+    background-image: url('/pages/login/images/insert-image-html.jpg');
+    background-size: cover;
+}
 .general {
     display: flex;
     justify-content: center;
@@ -7,4 +11,12 @@
 #form {
     width: 30%;
     margin: auto;
+}
+
+.mb-3 {
+    color:yellow
+}
+
+#emailHelp {
+    color: green;
 }

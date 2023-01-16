@@ -15,7 +15,6 @@ function onSubmit($event) {
         password: input2.value
     }
  authentificationResponse(user).then(response => {
-   //  console.log('მოსული დატა', response)
    response.token ? window.location.href = '../main/main.html' : null
     
  }).catch(error => {

@@ -1,0 +1,14 @@
+.general {
+    display: flex;
+    width: 90%;
+    margin: auto;
+    justify-content: space-between;
+    gap: 5%;
+    flex-wrap: wrap;
+}
+
+.general .card{
+    flex-basis: 30%;
+    margin-top: 6rem;
+}
+

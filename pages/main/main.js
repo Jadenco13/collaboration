@@ -12,7 +12,7 @@ window.onload = () => {
 
     function cardsRender(usersArr) {
         let general = document.querySelector('.general');
-        usersArr.forEach(element => {
+        usersArr.forEach((element, index) => {
             let card = `
                 <div class="card">
                     <img src="https://cdn-icons-png.flaticon.com/512/149/149995.png" class="card-img-top" alt="...">
@@ -20,25 +20,29 @@ window.onload = () => {
                         <h5 class="card-title">${element.name}</h5>
                         <p class="card-email">${element.email}</p>
                         <p class="card-phone">${element.phone}</p>
-                        <a onclick="getPosts(${element.id})" id="post" class="btn btn-primary">Posts</a>
+                        <a onclick="getPosts(${element.id}, ${index})" id="post" class="btn btn-primary">Posts</a>
+                        <div class="posts">
+
+                        </div>
                     </div>
                 </div>
                 `
+                getPosts = async (id, index)  => {
+                    try {
+                        const posts = await (await fetch('https://jsonplaceholder.typicode.com/posts?userId=' + id)).json();
+                        posts.forEach(post => {
+                            general.children[index].querySelector('.posts').innerHTML += `<p>${post.title}</p>`
+                           
+                        })
+                       
+                    } catch (error) {
+                        console.log(error)
+                    }
+            
+                }
             general.innerHTML += card;
-            // document.querySelector('#post').addEventListener('click', () => {
-            //     alert('george')
-            // })
         }
-        );
-      
+        ); 
     }
-
-    getPosts = (id) => {
-        console.log(id)
-    }
-  
 }
 
-// fetch('https://jsonplaceholder.typicode.com/users')
-//       .then(response => response.json())
-//       .then(json => console.log(json))

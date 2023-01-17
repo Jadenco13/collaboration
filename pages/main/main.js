@@ -15,7 +15,9 @@ window.onload = () => {
         usersArr.forEach((element, index) => {
             let card = `
                 <div class="card">
-                    <img src="https://cdn-icons-png.flaticon.com/512/149/149995.png" class="card-img-top" alt="...">
+                    <div class="logo-container">
+                        <img src="https://cdn-icons-png.flaticon.com/512/149/149995.png" class="card-img-top" alt="...">
+                    </div>   
                     <div class="card-body">
                         <h5 class="card-title">${element.name}</h5>
                         <p class="card-email">${element.email}</p>

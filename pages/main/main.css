@@ -1,14 +1,35 @@
 .general {
-    display: flex;
-    width: 90%;
+   width: 30%;
+   margin: auto;
+}
+.general .card {
+    min-height: 50vh;
+}
+
+.general > :not(:first-child) {
+    margin-top: 4rem;
+}
+.general .card .card-body {
+    height: 70%;
+    width: 70%;
     margin: auto;
-    justify-content: space-between;
-    gap: 5%;
-    flex-wrap: wrap;
+}
+.general .card .card-body h5 {
+    text-align: center;
+}
+.general .card .logo-container {
+    background-color: steelblue;
+    padding: 2rem 0;
+    width: 100%;
+    display: flex;
+}
+.general .card .logo-container img{
+    justify-content: center;
+    width: 200px;
+    margin: auto;
+    height: 30%;
 }
 
-.general .card{
-    flex-basis: 30%;
-    margin-top: 6rem;
+.general .card .card-body .posts {
+    margin: auto;
 }
-

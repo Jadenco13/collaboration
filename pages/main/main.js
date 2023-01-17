@@ -20,22 +20,23 @@ window.onload = () => {
                         <h5 class="card-title">${element.name}</h5>
                         <p class="card-email">${element.email}</p>
                         <p class="card-phone">${element.phone}</p>
-                        <a user-id="${element.id}" id="post" class="btn btn-primary">Posts</a>
+                        <a onclick="getPosts(${element.id})" id="post" class="btn btn-primary">Posts</a>
                     </div>
                 </div>
                 `
             general.innerHTML += card;
+            // document.querySelector('#post').addEventListener('click', () => {
+            //     alert('george')
+            // })
         }
         );
-        document.querySelector('#post').addEventListener('click', () => {
-            alert('im work')
-        })
+      
     }
 
-
-    function getPosts() {
-        alert('im work')
+    getPosts = (id) => {
+        console.log(id)
     }
+  
 }
 
 // fetch('https://jsonplaceholder.typicode.com/users')

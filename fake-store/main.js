@@ -1,6 +1,6 @@
  function authentificationResponse(user) {
     return new Promise((resolve, reject) => {
-        if (user && user.userName == 'admin' && user.password == 12345) {
+        if (user && user.userName == 'admin@gmail.com' && user.password == 12345) {
             const successObject = {
                 msg: 'Success',
                 data: 'token'

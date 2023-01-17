@@ -17,8 +17,10 @@ body {
 }
 .general .card .card-body {
     height: 70%;
-    width: 70%;
+    width: 85%;
     margin: auto;
+    padding-left: 0;
+    padding-right: 0;
 }
 .general .card .card-body h5 {
     text-align: center;
@@ -38,4 +40,8 @@ body {
 
 .general .card .card-body .posts {
     margin: auto;
+padding-top: 2rem;
+}
+.general .card .card-body .posts p {
+    color: blue;
 }

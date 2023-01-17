@@ -29,18 +29,24 @@ window.onload = () => {
                     </div>
                 </div>
                 `
+                let postsCache = {}
                 getPosts = async (id, index)  => {
-                    try {
-                        const posts = await (await fetch('https://jsonplaceholder.typicode.com/posts?userId=' + id)).json();
-                        posts.forEach(post => {
-                            general.children[index].querySelector('.posts').innerHTML += `<p>${post.title}</p>`
-                           
-                        })
+                    if(index in postsCache){
+                        return postsCache[index]
+                    }else {
+                        try {
+                            const posts = await (await fetch('https://jsonplaceholder.typicode.com/posts?userId=' + id)).json();
+                            posts.forEach(post => {
+                                general.children[index].querySelector('.posts').innerHTML += `<p>${post.title}</p>`
+                            })  
+                            cache[index] = posts
+                        } catch (error) {
+                            console.log(error)
+                        }
                        
-                    } catch (error) {
-                        console.log(error)
                     }
-            
+                   
+                   
                 }
             general.innerHTML += card;
         }

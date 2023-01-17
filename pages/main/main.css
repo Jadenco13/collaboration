@@ -1,9 +1,15 @@
+body {
+    background-color: whitesmoke!important;
+}
 .general {
    width: 30%;
    margin: auto;
 }
 .general .card {
     min-height: 50vh;
+    box-shadow: 2px -1px 26px 3px rgba(43,77,150,0.45);
+-webkit-box-shadow: 2px -1px 26px 3px rgba(43,77,150,0.45);
+-moz-box-shadow: 2px -1px 26px 3px rgba(43,77,150,0.45);
 }
 
 .general > :not(:first-child) {
